@@ -4,10 +4,12 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import CropDinIcon from '@mui/icons-material/CropDin';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
 import { useNavigate } from 'react-router-dom';
 
 const actions = [
   { icon: <CropDinIcon />, name: 'Box-Shadow', path: '/box-shadow' },
+  { icon: <ColorLensIcon />, name: 'Color-Gradient', path: '/color-gradient' },
 ];
 
 export default function BasicSpeedDial() {
