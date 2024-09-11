@@ -4,6 +4,7 @@ import HomePage from './pages/Home';
 import BasicSpeedDial from './components/SpeedDialComponent';
 import BoxShadowGenerator from './pages/BoxShadow';
 import GradientGenerator from './pages/ColorGradient';
+import TransformGenerator from './pages/Transform';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/box-shadow" element={<BoxShadowGenerator />} />
           <Route path="/color-gradient" element={<GradientGenerator />} />
+          <Route path="/transform" element={<TransformGenerator />} />
         </Routes>
       </div>
     </Router>
