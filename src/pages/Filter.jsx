@@ -80,6 +80,7 @@ const FilterGenerator = () => {
 
   return (
     <div className="app">
+      <h1>Filter Generator</h1>
       <div className="controls">
         <div className="sliders">
           <Slider name="brightness" label="Brightness" min={0} max={200} value={filterValues.brightness} onChange={handleSliderChange} />

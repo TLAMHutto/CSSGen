@@ -6,7 +6,7 @@ import BoxShadowGenerator from './pages/BoxShadow';
 import GradientGenerator from './pages/ColorGradient';
 import TransformGenerator from './pages/Transform';
 import FilerGenerator from './pages/Filter'
-
+import Resize from './pages/Resize';
 const App = () => {
   return (
     <Router>
@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/color-gradient" element={<GradientGenerator />} />
           <Route path="/transform" element={<TransformGenerator />} />
           <Route path="/filter" element={<FilerGenerator />} />
+          <Route path="/resize" element={<Resize />} />
         </Routes>
       </div>
     </Router>

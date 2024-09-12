@@ -4,6 +4,7 @@ import CropDinIcon from '@mui/icons-material/CropDin';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import TransformIcon from '@mui/icons-material/Transform';
 import GrainIcon from '@mui/icons-material/Grain';
+import AspectRatioIcon from '@mui/icons-material/AspectRatio';
 import { useNavigate } from 'react-router-dom';
 
 const actions = [
@@ -11,6 +12,7 @@ const actions = [
   { icon: <ColorLensIcon />, name: 'Color-Gradient', path: '/color-gradient' },
   { icon: <TransformIcon />, name: 'Transform', path: '/transform' },
   { icon: <GrainIcon />, name: 'Filter', path: '/filter' },
+  { icon: <AspectRatioIcon />, name: 'Resize', path: '/resize' },
 ];
 
 export default function BasicSpeedDial() {

@@ -19,6 +19,7 @@ const GradientGenerator = () => {
 
   return (
     <div>
+      <h1>Color Gradient Generator</h1>
       <Box gradient={gradient} />
 
       <div>

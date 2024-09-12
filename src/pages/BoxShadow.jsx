@@ -78,6 +78,7 @@ const BoxShadowGenerator = () => {
 
   return (
     <div className="app">
+      <h1>Box Shadow Generator</h1>
       <Preview boxShadow={boxShadow} />
       <div className="controls">
         <div className="sliders">

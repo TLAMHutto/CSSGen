@@ -1,3 +1,6 @@
+html{
+  background: gray;
+}
 .app {
     display: flex;
     flex-direction: column;
@@ -43,4 +46,7 @@ img{
     overflow-x: auto;
     word-wrap: break-word; 
     white-space: pre-wrap; 
+  }
+  h1{
+    text-align: center;
   }

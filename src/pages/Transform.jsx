@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
+import '../App.css'
 // Styled component for the preview box
 const Box = styled.div`
   width: 200px;
@@ -25,7 +25,7 @@ const TransformGenerator = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      
+      <h1>Transform Generator</h1>
       {/* Preview Box */}
       <Box transform={transform}/>
 
