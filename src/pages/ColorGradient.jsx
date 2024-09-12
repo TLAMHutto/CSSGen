@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import '../App.css'
 
 const Box = styled.div`
   width: 300px;
@@ -47,6 +48,10 @@ const GradientGenerator = () => {
           value={angle}
           onChange={(e) => setAngle(e.target.value)}
         />
+      </div>
+      <div className="css-code">
+        <p>CSS Code:</p>
+        <pre>{`color-gradient: ${gradient};`}</pre>
       </div>
     </div>
   );

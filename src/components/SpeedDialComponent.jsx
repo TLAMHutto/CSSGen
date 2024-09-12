@@ -1,8 +1,5 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
+import { Box, SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material';
 import CropDinIcon from '@mui/icons-material/CropDin';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import TransformIcon from '@mui/icons-material/Transform';
@@ -13,17 +10,17 @@ const actions = [
   { icon: <CropDinIcon />, name: 'Box-Shadow', path: '/box-shadow' },
   { icon: <ColorLensIcon />, name: 'Color-Gradient', path: '/color-gradient' },
   { icon: <TransformIcon />, name: 'Transform', path: '/transform' },
-  { icon: <GrainIcon />, name: 'Transform', path: '/filter' },
+  { icon: <GrainIcon />, name: 'Filter', path: '/filter' },
 ];
 
 export default function BasicSpeedDial() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
+    <Box sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 1300 }}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"
-        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+        sx={{ position: 'relative' }}
         icon={<SpeedDialIcon />}
       >
         {actions.map((action) => (
