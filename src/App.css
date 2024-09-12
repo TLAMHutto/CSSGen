@@ -25,7 +25,10 @@
     height: 300px;
     text-align: center;
   }
-
+img{
+  width: 300px;
+  height: 300px;
+}
   pre {
     display: block;
     padding: 1em;

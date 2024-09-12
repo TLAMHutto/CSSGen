@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-
+import fire from '../filter.png'
 // Slider Component
 const Slider = ({ name, label, min, max, value, onChange }) => {
   return (
@@ -45,7 +45,7 @@ const Preview = ({ filterValues, color }) => {
 
   return (
     <div className="preview" style={filterStyle}>
-        <p>300 x 300</p>
+        <img src={fire} alt="fire" />
     </div>
   );
 };
