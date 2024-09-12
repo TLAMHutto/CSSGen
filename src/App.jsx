@@ -5,6 +5,7 @@ import BasicSpeedDial from './components/SpeedDialComponent';
 import BoxShadowGenerator from './pages/BoxShadow';
 import GradientGenerator from './pages/ColorGradient';
 import TransformGenerator from './pages/Transform';
+import FilerGenerator from './pages/Filter'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/box-shadow" element={<BoxShadowGenerator />} />
           <Route path="/color-gradient" element={<GradientGenerator />} />
           <Route path="/transform" element={<TransformGenerator />} />
+          <Route path="/filter" element={<FilerGenerator />} />
         </Routes>
       </div>
     </Router>
