@@ -1,1 +1,0 @@
-how would i go about building react app that will generate css code based on adjusting sliders, example. a css box-shadow generator with three sliders to manipulate box-shadow values, with a live view of a component inheriting the adjusted values 
