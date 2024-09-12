@@ -20,23 +20,37 @@ const Slider = ({ name, label, min, max, value, onChange }) => {
   );
 };
 
-// Preview Component
-const Preview = ({ filterValues }) => {
-  const { brightness, contrast, saturate, blur } = filterValues;
-  const filterStyle = {
-    filter: `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) blur(${blur}px)`,
-  };
-
+// ColorPicker Component
+const ColorPicker = ({ color, onChange }) => {
   return (
-    <div className="preview">
-      <div className="image" style={filterStyle}>
-        <img src="https://via.placeholder.com/300" alt="Preview" />
-      </div>
+    <div className="color-picker">
+      <label htmlFor="color">Color</label>
+      <input
+        type="color"
+        id="color"
+        value={color}
+        onChange={onChange}
+      />
     </div>
   );
 };
 
-// App Component
+// Preview Component
+const Preview = ({ filterValues, color }) => {
+  const { brightness, contrast, saturate, blur } = filterValues;
+  const filterStyle = {
+    filter: `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) blur(${blur}px)`,
+    backgroundColor: color,
+  };
+
+  return (
+    <div className="preview" style={filterStyle}>
+        <p>300 x 300</p>
+    </div>
+  );
+};
+
+// FilterGenerator Component
 const FilterGenerator = () => {
   const [filterValues, setFilterValues] = useState({
     brightness: 100,
@@ -44,6 +58,7 @@ const FilterGenerator = () => {
     saturate: 100,
     blur: 0,
   });
+  const [color, setColor] = useState("#ffffff"); // Default to white
 
   const handleSliderChange = (e) => {
     const { name, value } = e.target;
@@ -53,15 +68,22 @@ const FilterGenerator = () => {
     }));
   };
 
+  const handleColorChange = (e) => {
+    setColor(e.target.value);
+  };
+
   return (
     <div className="app">
-      <div className="sliders">
-        <Slider name="brightness" label="Brightness" min={0} max={200} value={filterValues.brightness} onChange={handleSliderChange} />
-        <Slider name="contrast" label="Contrast" min={0} max={200} value={filterValues.contrast} onChange={handleSliderChange} />
-        <Slider name="saturate" label="Saturate" min={0} max={200} value={filterValues.saturate} onChange={handleSliderChange} />
-        <Slider name="blur" label="Blur" min={0} max={10} value={filterValues.blur} onChange={handleSliderChange} />
+      <div className="controls">
+        <div className="sliders">
+          <Slider name="brightness" label="Brightness" min={0} max={200} value={filterValues.brightness} onChange={handleSliderChange} />
+          <Slider name="contrast" label="Contrast" min={0} max={200} value={filterValues.contrast} onChange={handleSliderChange} />
+          <Slider name="saturate" label="Saturate" min={0} max={200} value={filterValues.saturate} onChange={handleSliderChange} />
+          <Slider name="blur" label="Blur" min={0} max={10} value={filterValues.blur} onChange={handleSliderChange} />
+        </div>
+        <ColorPicker color={color} onChange={handleColorChange} />
       </div>
-      <Preview filterValues={filterValues} />
+      <Preview filterValues={filterValues} color={color} />
     </div>
   );
 };
